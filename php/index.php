@@ -1,8 +1,8 @@
 <?php
 // Conexión a la base de datos
-$servername = "db";
-$username = "root";//"root";
-$password = "root";//"";
+$servername = "db";  //PMA_HOST
+$username = "root";  //siempre root
+$password = "root";  //MYSQL_ROOT_PASSWORD
 $dbname = "concesionario";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
