@@ -1,0 +1,29 @@
+services:
+  db:
+    image: dollysarmiento2024/mi_bbdd_concesionario:v1
+    container_name: contenedor_bbdd_concesionario
+    #environment:
+    #  MYSQL_ROOT_PASSWORD: fernanda
+    #  MYSQL_DATABASE: concesionario
+    #  MYSQL_USER: root
+    #  MYSQL_PASSWORD: 
+    ports:
+      - "3306:3306"
+  php:
+    image: dollysarmiento2024/mi_app_concesionario:v1
+    container_name: contenedor_app_concesionario
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: contenedor_php_myadmin
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: fernanda
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
