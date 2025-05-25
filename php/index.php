@@ -1,6 +1,6 @@
 <?php
 // Conexión a la base de datos
-$servername = "localhost";
+$servername = "db";
 $username = "fernanda";//"root";
 $password = "fernanda";//"";
 $dbname = "concesionario";
