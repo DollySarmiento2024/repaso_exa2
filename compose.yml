@@ -5,8 +5,8 @@ services:
     #environment:
     #  MYSQL_ROOT_PASSWORD: fernanda
     #  MYSQL_DATABASE: concesionario
-    #  MYSQL_USER: root
-    #  MYSQL_PASSWORD: 
+    #  MYSQL_USER: fernanda
+    #  MYSQL_PASSWORD: fernanda
     ports:
       - "3306:3306"
   php:
